@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "PROJECT_NAME",
-    "description": "PROJECT_NAME",
-    "slug": "PROJECT_NAME",
+    "name": "zk-connect-mobile",
+    "description": "zk-connect-mobile",
+    "slug": "zk-connect-mobile",
     "version": "1.0.0",
     "platforms": ["ios", "android", "web"],
     "orientation": "portrait",

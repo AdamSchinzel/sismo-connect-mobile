@@ -1,19 +1,4 @@
-# PROJECT_NAME
-
-## Get Started
-
-1. To create a project based on this template click on the `Use this template` button
-2. Find and Replace `PROJECT_NAME` placeholder with the real project name
-3. Delete libraries which do not satisfy project needs
-4. Delete this section from `README`
-5. To cover your tracks and incorporate the changes to the project's `Initial commit`, run these commands:
-
-```sh
-git commit -a --amend
-git push -f origin master
-```
-
----
+# zkConnect mobile
 
 ## Documentation
 

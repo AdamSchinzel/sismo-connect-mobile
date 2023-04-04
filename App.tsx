@@ -15,7 +15,7 @@ const App = () => {
 
   const screens: {
     name: keyof RootStackParamList;
-    component: React.ReactNode;
+    component: () => JSX.Element;
   }[] = [
     { name: "Home", component: HomeScreen },
     { name: "About", component: AboutScreen },

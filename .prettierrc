@@ -4,6 +4,11 @@
   "semi": true,
   "singleQuote": false,
   "bracketSpacing": true,
-  "jsxBracketSameLine": true,
-  "printWidth": 120
+  "bracketSameLine": true,
+  "printWidth": 120,
+  "endOfLine": "lf",
+  "importOrder": ["^components/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
 }

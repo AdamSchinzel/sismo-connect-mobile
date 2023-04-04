@@ -9,7 +9,6 @@
     "esModuleInterop": true,
     "jsx": "react-native",
     "sourceMap": true,
-    "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
