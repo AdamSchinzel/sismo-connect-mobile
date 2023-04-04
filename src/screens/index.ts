@@ -1,4 +1,4 @@
 import HomeScreen from "./HomeScreen";
-import AboutScreen from "./AboutScreen";
+import SecretMessageScreen from "./SecretMessageScreen";
 
-export { HomeScreen, AboutScreen };
+export { HomeScreen, SecretMessageScreen };

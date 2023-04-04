@@ -7,7 +7,7 @@ import React from "react";
 import "react-native-gesture-handler";
 
 import theme from "./src/config/theme";
-import { AboutScreen, HomeScreen } from "./src/screens";
+import { HomeScreen, SecretMessageScreen } from "./src/screens";
 import { RootStackParamList } from "./src/screens/RootStackParams";
 import { client } from "./src/services/client";
 
@@ -21,7 +21,7 @@ const App = () => {
     component: () => JSX.Element;
   }[] = [
     { name: "Home", component: HomeScreen },
-    { name: "About", component: AboutScreen },
+    { name: "SecretMessage", component: SecretMessageScreen },
   ];
 
   return (

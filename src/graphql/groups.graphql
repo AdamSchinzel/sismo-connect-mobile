@@ -1,12 +1,10 @@
-query getAllGroups {
+query Groups {
   groups {
     id
     name
     latestSnapshot {
       timestamp
-      valueDistribution {
-        numberOfAccounts
-      }
+      size
     }
   }
 }

@@ -1,5 +1,5 @@
+import { View } from "native-base";
 import React from "react";
-import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const LayoutSafeArea = (props: any) => {

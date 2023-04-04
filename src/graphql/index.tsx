@@ -513,50 +513,48 @@ export enum Transaction_OrderBy {
   Timestamp = 'timestamp'
 }
 
-export type GetAllGroupsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GroupsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllGroupsQuery = { __typename?: 'Query', groups: Array<{ __typename?: 'Group', id: string, name: string, latestSnapshot: { __typename?: 'GroupSnapshot', timestamp: string, valueDistribution: Array<{ __typename?: 'NbOfAccountsByValue', numberOfAccounts: any } | null> } } | null> };
+export type GroupsQuery = { __typename?: 'Query', groups: Array<{ __typename?: 'Group', id: string, name: string, latestSnapshot: { __typename?: 'GroupSnapshot', timestamp: string, size: any } } | null> };
 
 
-export const GetAllGroupsDocument = gql`
-    query getAllGroups {
+export const GroupsDocument = gql`
+    query Groups {
   groups {
     id
     name
     latestSnapshot {
       timestamp
-      valueDistribution {
-        numberOfAccounts
-      }
+      size
     }
   }
 }
     `;
 
 /**
- * __useGetAllGroupsQuery__
+ * __useGroupsQuery__
  *
- * To run a query within a React component, call `useGetAllGroupsQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetAllGroupsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGroupsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGroupsQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetAllGroupsQuery({
+ * const { data, loading, error } = useGroupsQuery({
  *   variables: {
  *   },
  * });
  */
-export function useGetAllGroupsQuery(baseOptions?: Apollo.QueryHookOptions<GetAllGroupsQuery, GetAllGroupsQueryVariables>) {
+export function useGroupsQuery(baseOptions?: Apollo.QueryHookOptions<GroupsQuery, GroupsQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetAllGroupsQuery, GetAllGroupsQueryVariables>(GetAllGroupsDocument, options);
+        return Apollo.useQuery<GroupsQuery, GroupsQueryVariables>(GroupsDocument, options);
       }
-export function useGetAllGroupsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllGroupsQuery, GetAllGroupsQueryVariables>) {
+export function useGroupsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GroupsQuery, GroupsQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetAllGroupsQuery, GetAllGroupsQueryVariables>(GetAllGroupsDocument, options);
+          return Apollo.useLazyQuery<GroupsQuery, GroupsQueryVariables>(GroupsDocument, options);
         }
-export type GetAllGroupsQueryHookResult = ReturnType<typeof useGetAllGroupsQuery>;
-export type GetAllGroupsLazyQueryHookResult = ReturnType<typeof useGetAllGroupsLazyQuery>;
-export type GetAllGroupsQueryResult = Apollo.QueryResult<GetAllGroupsQuery, GetAllGroupsQueryVariables>;
+export type GroupsQueryHookResult = ReturnType<typeof useGroupsQuery>;
+export type GroupsLazyQueryHookResult = ReturnType<typeof useGroupsLazyQuery>;
+export type GroupsQueryResult = Apollo.QueryResult<GroupsQuery, GroupsQueryVariables>;
