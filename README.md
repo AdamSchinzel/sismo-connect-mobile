@@ -1,5 +1,9 @@
 # zkConnect mobile
 
+This is example how to use zkConnect in mobile app written in React Native (Expo).
+
+Right now it works only when you run it in web browser because the `@sismo-core/zk-connect-client` only works in web browser. However I manage to tweak this library so it works in mobile app, the real problem was to get past authorized domains set by Sismo when creating zkConnect app.
+
 ## Documentation
 
 Project is based on `Expo`, a framework and a platform for universal React applications. Check out the [documentation](https://docs.expo.dev/) for more information.
