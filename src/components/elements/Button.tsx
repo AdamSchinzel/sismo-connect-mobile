@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity } from "react-native";
+import { Button as Btn } from "native-base";
 
 interface ButtonProps {
   text: string;
@@ -7,11 +7,9 @@ interface ButtonProps {
 
 const Button = ({ text, onPress }: ButtonProps) => {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{ padding: 20, backgroundColor: "#5C997A", borderRadius: 8, width: 200, alignItems: "center" }}>
-      <Text style={{ color: "#fff", fontSize: 16, fontWeight: "500" }}>{text}</Text>
-    </TouchableOpacity>
+    <Btn onPress={() => onPress()} mt={5} _text={{ fontWeight: "bold", fontSize: "lg" }} size="lg">
+      text
+    </Btn>
   );
 };
 

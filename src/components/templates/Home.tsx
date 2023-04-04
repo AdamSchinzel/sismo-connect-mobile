@@ -2,13 +2,14 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { ZkConnectClientConfig } from "@sismo-core/zk-connect-client";
-import { Button, Icon, Select, View, useToast } from "native-base";
+import { Icon, Select, View, useToast } from "native-base";
 import React, { useEffect, useState } from "react";
 
 import { TOAST_DURATION } from "../../config/constants";
 import { useGroupsQuery } from "../../graphql";
 import { useZkConnect } from "../../hooks/useZkConnect";
 import { RootStackParamList } from "../../screens/RootStackParams";
+import Button from "../elements/Button";
 import Heading from "../modules/Heading";
 
 type SecretMessageProp = StackNavigationProp<RootStackParamList, "Home">;
@@ -81,9 +82,7 @@ const Home = () => {
             ))
           )}
         </Select>
-        <Button onPress={() => handleProve()} mt={5} _text={{ fontWeight: "bold", fontSize: "lg" }} size="lg">
-          Prove
-        </Button>
+        <Button text="Prove" onPress={() => handleProve()} />
       </View>
     </View>
   );
