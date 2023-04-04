@@ -1,0 +1,11 @@
+overwrite: true
+config:
+  withHooks: true
+schema: "https://api.sismo.io"
+documents: "**/*.graphql"
+generates:
+  src/graphql/index.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

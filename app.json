@@ -4,7 +4,7 @@
     "description": "zk-connect-mobile",
     "slug": "zk-connect-mobile",
     "version": "1.0.0",
-    "platforms": ["ios", "android", "web"],
+    "platforms": ["web"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {

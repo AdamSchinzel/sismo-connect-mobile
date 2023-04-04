@@ -8,29 +8,31 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint && prettier --check \"**/**.{ts,js,tsx}\" \"*.{json,md,yml,mdx}\"",
+    "lint": "eslint --fix **/**.{ts,js,tsx} *.{json,md,yml,mdx}",
     "prettier": "prettier --write '**/**.{ts,js,tsx}' '*.{json,md,yml,mdx}'"
   },
   "dependencies": {
-    "@expo/vector-icons": "^13.0.0",
+    "@apollo/client": "3.7.11",
+    "@graphql-codegen/cli": "3.3.0",
+    "@graphql-codegen/typescript": "3.0.3",
+    "@graphql-codegen/typescript-operations": "3.0.3",
+    "@graphql-codegen/typescript-react-apollo": "3.3.7",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/stack": "^6.3.4",
     "expo": "^46.0.0",
-    "expo-localization": "~13.1.0",
     "expo-status-bar": "~1.4.0",
-    "i18n-js": "^3.9.2",
+    "moment": "2.29.4",
+    "native-base": "3.4.28",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
     "react-native-gesture-handler": "~2.5.0",
     "react-native-safe-area-context": "4.3.1",
-    "react-native-web": "~0.18.7",
-    "sentry-expo": "~5.0.0"
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/i18n-js": "^3.8.3",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
@@ -43,6 +45,5 @@
     "expo-cli": "^5.5.1",
     "prettier": "^2.7.1",
     "typescript": "^4.6.3"
-  },
-  "private": true
+  }
 }

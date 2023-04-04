@@ -6,12 +6,7 @@ interface ButtonProps {
   onPress: () => void;
 }
 
-const Button = (
-  {
-    text,
-    onPress
-  }: ButtonProps
-) => {
+const Button = ({ text, onPress }: ButtonProps) => {
   return (
     <TouchableOpacity
       onPress={onPress}
