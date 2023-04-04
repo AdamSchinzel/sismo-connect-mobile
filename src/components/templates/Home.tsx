@@ -37,7 +37,7 @@ const Home = () => {
         duration: TOAST_DURATION,
       });
     } else {
-      zkConnect.request({ claimRequest: { groupId: "0x42c768bb8ae79e4c5c05d3b51a4ec74a" } });
+      zkConnect.request({ claimRequest: { groupId } });
     }
   };
 
