@@ -25,17 +25,6 @@ const Home = () => {
 
   const config: ZkConnectClientConfig = {
     appId: "0xa4bd963b0de72eb2f23207d8ed9f6e88",
-    devMode: {
-      enabled: true,
-      devGroups: [
-        {
-          groupId: "0x42c768bb8ae79e4c5c05d3b51a4ec74a",
-          data: {
-            "0xF1c7B271C649b3A5606E3C6f748EA7a8e4351D2B": 1,
-          },
-        },
-      ],
-    },
   };
 
   const { zkConnect, response, setResponse } = useZkConnect({ config });
