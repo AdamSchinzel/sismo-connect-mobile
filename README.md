@@ -29,7 +29,7 @@ npm run web
 
 ## Folder structure
 
-```
+```bash
 template-expo/
 ├── .expo
 ├── expo-shared
