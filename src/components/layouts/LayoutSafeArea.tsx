@@ -15,7 +15,7 @@ const LayoutSafeArea = (props: any) => {
         paddingBottom: props.ignoreBottom ? 0 : insets.bottom,
         paddingLeft: insets.left,
         paddingRight: insets.right,
-        backgroundColor: "#191919",
+        backgroundColor: "#121F3C",
       }}>
       {props.children}
     </View>

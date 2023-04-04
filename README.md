@@ -20,7 +20,7 @@ npm install
 **To start a Metro Bundler:**
 
 ```sh
-npm start
+npm run web
 ```
 
 ## Folder structure
@@ -29,27 +29,21 @@ npm start
 template-expo/
 ├── .expo
 ├── expo-shared
-├── assets (images etc.)
-├── config (theme, constants etc.)
+├── assets
 └── src
 │   ├── components (inspired by atomic design principles)
 │   │   ├── elements (small building blocks)
 │   │   ├── layouts (wrappers for templates)
 │   │   ├── modules (more building blocks together)
 │   │   └── templates (screen specific content)
-│   ├── graphql (each module and its queries and mutations)
-│   ├── i18n (translations)
+│   ├── config
+│   ├── graphql
+│   ├── hooks
 │   ├── screens
-│   ├── services (graphql client and other services)
-│   ├── stores (state management)
-│   ├── types (more complex interfaces)
-│   └── utils (tab navigator etc.)
+│   ├── services
+│   └── utils
 └── web (simulate mobile in browser window)
 ```
-
-## Expo Go
-
-If you want to preview your app directly in your mobile device, then install Expo Go app on App Store/Google Play and scan the QR code that is on http://localhost:19002/.
 
 ## What's Inside
 
@@ -65,6 +59,4 @@ If you want to preview your app directly in your mobile device, then install Exp
 
   - [Prettier](https://prettier.io/)
   - [ESLint](https://eslint.org/)
-
-- Other
-  - [Sentry](https://sentry.io/welcome/)
+  - [EditorConfig](https://editorconfig.org/)

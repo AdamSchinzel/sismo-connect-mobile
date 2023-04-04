@@ -1,0 +1,12 @@
+query getAllGroups {
+  groups {
+    id
+    name
+    latestSnapshot {
+      timestamp
+      valueDistribution {
+        numberOfAccounts
+      }
+    }
+  }
+}

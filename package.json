@@ -9,7 +9,8 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint --fix **/**.{ts,js,tsx} *.{json,md,yml,mdx}",
-    "prettier": "prettier --write '**/**.{ts,js,tsx}' '*.{json,md,yml,mdx}'"
+    "prettier": "prettier --write '**/**.{ts,js,tsx}' '*.{json,md,yml,mdx}'",
+    "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/client": "3.7.11",

@@ -1,12 +1,15 @@
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-
+import { ApolloProvider } from "@apollo/client";
 import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { RootStackParamList } from "./src/screens/RootStackParams";
+import { StatusBar } from "expo-status-bar";
+import { NativeBaseProvider } from "native-base";
+import React from "react";
 import "react-native-gesture-handler";
 
-import { HomeScreen, AboutScreen } from "./src/screens";
+import theme from "./src/config/theme";
+import { AboutScreen, HomeScreen } from "./src/screens";
+import { RootStackParamList } from "./src/screens/RootStackParams";
+import { client } from "./src/services/client";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -22,16 +25,18 @@ const App = () => {
   ];
 
   return (
-    <>
+    <ApolloProvider client={client}>
       <StatusBar style="light" />
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: true }}>
-          {screens.map((it: any) => (
-            <Stack.Screen key={it.name} {...it} />
-          ))}
-        </Stack.Navigator>
+        <NativeBaseProvider theme={theme}>
+          <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: true }}>
+            {screens.map((it: any) => (
+              <Stack.Screen key={it.name} {...it} />
+            ))}
+          </Stack.Navigator>
+        </NativeBaseProvider>
       </NavigationContainer>
-    </>
+    </ApolloProvider>
   );
 };
 
