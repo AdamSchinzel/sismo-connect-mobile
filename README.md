@@ -46,8 +46,7 @@ zk-connect-mobile/
 │   ├── graphql
 │   ├── hooks
 │   ├── screens
-│   ├── services
-│   └── utils
+│   └── services
 └── web (simulate mobile in browser window)
 ```
 
