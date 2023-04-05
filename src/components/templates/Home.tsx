@@ -51,7 +51,7 @@ const Home = () => {
         zkConnectResponse: response,
       });
 
-      if (res.data.status) navigation.navigate("SecretMessage");
+      if (res.data.verified) navigation.navigate("SecretMessage");
     } catch (e: any) {
       toast.show({
         title: "Proof verification failed",
