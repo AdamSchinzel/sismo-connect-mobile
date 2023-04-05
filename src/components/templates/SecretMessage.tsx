@@ -14,7 +14,7 @@ const SecretMessage = () => {
 
   return (
     <View>
-      <Heading title="You made it!" subtitle="Secret message is Ethereum." />
+      <Heading title="You made it!" subtitle="The secret message is Ethereum." />
       <Button text="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
