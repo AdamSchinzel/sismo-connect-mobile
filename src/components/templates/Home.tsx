@@ -2,10 +2,11 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { ZkConnectClientConfig } from "@sismo-core/zk-connect-client";
+import axios from "axios";
 import { Icon, Select, View, useToast } from "native-base";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { TOAST_DURATION } from "../../config/constants";
+import { BACKEND_ENDPOINT, TOAST_DURATION } from "../../config/constants";
 import { useGroupsQuery } from "../../graphql";
 import { useZkConnect } from "../../hooks/useZkConnect";
 import { RootStackParamList } from "../../screens/RootStackParams";
@@ -41,10 +42,23 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(async () => {
     if (!response) return;
 
-    navigation.navigate("SecretMessage");
+    try {
+      const res = await axios.post(`${BACKEND_ENDPOINT}/verify`, {
+        groupId,
+        zkConnectResponse: response,
+      });
+
+      if (res.data.status) navigation.navigate("SecretMessage");
+    } catch (e: any) {
+      toast.show({
+        title: "Proof verification failed",
+        duration: TOAST_DURATION,
+      });
+    }
+
     setResponse(null);
   }, [response]);
 

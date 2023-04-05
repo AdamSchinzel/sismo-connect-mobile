@@ -30,7 +30,7 @@ npm run web
 ## Folder structure
 
 ```bash
-template-expo/
+zk-connect-mobile/
 ├── .expo
 ├── expo-shared
 ├── assets
