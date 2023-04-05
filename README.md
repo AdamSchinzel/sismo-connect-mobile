@@ -25,7 +25,7 @@ First start [zk-connect-backend](https://github.com/AdamSchinzel/zk-connect-back
 npm install
 ```
 
-**To start a Metro Bundler:**
+**To start:**
 
 ```sh
 npm run web
