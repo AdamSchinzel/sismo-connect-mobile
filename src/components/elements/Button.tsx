@@ -1,11 +1,11 @@
 import { Button as Btn } from "native-base";
 
-interface ButtonProps {
+interface IButtonProps {
   text: string;
   onPress: () => void;
 }
 
-const Button = ({ text, onPress }: ButtonProps) => {
+const Button = ({ text, onPress }: IButtonProps) => {
   return (
     <Btn onPress={() => onPress} mt={5} _text={{ fontWeight: "bold", fontSize: "lg" }} size="lg">
       {text}

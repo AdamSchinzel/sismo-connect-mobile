@@ -13,10 +13,10 @@ import { RootStackParamList } from "../../screens/RootStackParams";
 import Button from "../elements/Button";
 import Heading from "../modules/Heading";
 
-type SecretMessageProp = StackNavigationProp<RootStackParamList, "Home">;
+type HomeProp = StackNavigationProp<RootStackParamList, "Home">;
 
 const Home = () => {
-  const navigation = useNavigation<SecretMessageProp>();
+  const navigation = useNavigation<HomeProp>();
 
   const [groupId, setGroupId] = useState<string>("");
 
