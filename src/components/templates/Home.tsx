@@ -1,14 +1,14 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { ZkConnectClientConfig } from "@sismo-core/zk-connect-client";
+import { SismoConnectClientConfig } from "@sismo-core/sismo-connect-client";
 import axios from "axios";
 import { Icon, Select, View, useToast } from "native-base";
 import { useEffect, useState } from "react";
 
 import { BACKEND_ENDPOINT, TOAST_DURATION } from "../../config/constants";
 import { useGroupsQuery } from "../../graphql";
-import { useZkConnect } from "../../hooks/useZkConnect";
+import { useZkConnect } from "../../hooks/useSismoConnect";
 import { RootStackParamList } from "../../screens/RootStackParams";
 import Button from "../elements/Button";
 import Heading from "../modules/Heading";
@@ -25,11 +25,11 @@ const Home = () => {
   const groups = useGroupsQuery();
   const groupsData = groups.data?.groups;
 
-  const config: ZkConnectClientConfig = {
+  const config: SismoConnectClientConfig = {
     appId: "0xa4bd963b0de72eb2f23207d8ed9f6e88",
   };
 
-  const { zkConnect, response, setResponse } = useZkConnect({ config });
+  const { sismoConnect, response, setResponse } = useZkConnect({ config });
 
   const handleProve = () => {
     if (!groupId) {
@@ -38,7 +38,7 @@ const Home = () => {
         duration: TOAST_DURATION,
       });
     } else {
-      zkConnect.request({ claimRequest: { groupId } });
+      sismoConnect.request({ claim: { groupId } });
     }
   };
 
