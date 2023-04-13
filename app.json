@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "zk-connect-mobile",
-    "description": "zk-connect-mobile",
-    "slug": "zk-connect-mobile",
+    "name": "sismo-connect-mobile",
+    "description": "sismo-connect-mobile",
+    "slug": "sismo-connect-mobile",
     "version": "1.0.0",
     "platforms": ["web"],
     "orientation": "portrait",

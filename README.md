@@ -17,7 +17,7 @@ Project is based on `Expo`, a framework and a platform for universal React appli
 
 ## Usage
 
-First start [zk-connect-backend](https://github.com/AdamSchinzel/zk-connect-backend) so you can verify proof in secure way.
+First start [sismo-connect-backend](https://github.com/AdamSchinzel/sismo-connect-backend) so you can verify proof in secure way.
 
 **Then install all necessary dependencies:**
 
@@ -34,7 +34,7 @@ npm run web
 ## Folder structure
 
 ```bash
-zk-connect-mobile/
+sismo-connect-mobile/
 ├── .expo
 ├── expo-shared
 ├── assets
