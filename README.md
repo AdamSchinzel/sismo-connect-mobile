@@ -37,17 +37,17 @@ sismo-connect-mobile/
 ├── expo-shared
 ├── assets
 └── src
-│   ├── components (inspired by atomic design principles)
-│   │   ├── elements (small building blocks)
-│   │   ├── layouts (wrappers for templates)
-│   │   ├── modules (more building blocks together)
-│   │   └── templates (screen specific content)
+│   ├── components
+│   │   ├── elements
+│   │   ├── layouts
+│   │   ├── modules
+│   │   └── templates
 │   ├── config
 │   ├── graphql
 │   ├── hooks
 │   ├── screens
 │   └── services
-└── web (simulate mobile in browser window)
+└── web
 ```
 
 ## What's Inside
