@@ -1,4 +1,4 @@
-# Sismo Connect mobile
+# Sismo Connect Mobile
 
 This is an example how to use Sismo Connect in mobile app written in React Native (Expo).
 
